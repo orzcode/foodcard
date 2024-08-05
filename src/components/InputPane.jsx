@@ -12,6 +12,11 @@ function InputPane() {
 	return (
 
 		<div className='InputPane'>
+			<h2>Recipe Name</h2>
+			<InputField />
+			<h2>Ingredients</h2>
+			<InputField />
+			<h2>Instructions</h2>
 			<InputField />
 		</div>
 

@@ -1,0 +1,18 @@
+.Header {
+	background-color: var(--header);
+	border-bottom: 1px solid black;
+	filter: drop-shadow(1px 1px 100px black);
+	width: 100%;
+	text-align: center;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin: auto;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	filter: drop-shadow(1px 1px 1px black);
+	font-size: clamp(3.3rem, 5vw, 4.5rem);
+}
