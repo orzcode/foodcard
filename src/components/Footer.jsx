@@ -4,10 +4,10 @@ function Footer() {
 
 	return (
 		<>
-		<div class='footer'>
-			Created by Orz 
+		<div className='footer'>
+			Created by OrzCode 
 			<a href='https://github.com/orzcode' target='_blank'>
-			<i class='fa-brands fa-github'></i></a></div>
+			<i className='fa-brands fa-github'></i></a></div>
 		</>
 	);
 }

@@ -3,6 +3,7 @@ import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 
 import InputField from './InputField'
+import TextArea from './TextArea'
 
 import '../styles/InputPane.css'
 
@@ -17,7 +18,7 @@ function InputPane() {
 			<h2>Ingredients</h2>
 			<InputField />
 			<h2>Instructions</h2>
-			<InputField />
+			<TextArea />
 		</div>
 
 	)
