@@ -3,23 +3,38 @@ import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
 import "../styles/PreviewPane.css";
 
-function PreviewPane() {
+function PreviewPane(props) {
   const [count, setCount] = useState(0);
-
-  const todos = [
-    { task: "mow the yard", id: 1 },
-    { task: "Work on Odin Projects", id: 2 },
-    { task: "feed the cat", id: 3 },
-  ];
 
   return (
     <div className="PreviewPane">
-      <ul>
-        {todos.map((todo) => (
-          // here we are using the already generated id as the key.
-          <li key={todo.id}>{todo.task}</li>
-        ))}
-      </ul>
+      <h2>{props.name}</h2>
+
+      <div className="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          {props.ingredients.map((ingredient) => (
+            <li key={ingredient}>{ingredient}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          {props.instructions.map((instruction) => (
+            <li key={instruction}>{instruction}</li>
+          ))}
+        </ol>
+      </div>
+
+      {props.notes ? (
+        <div className="notes">
+          <h3>Notes</h3>
+          <p>{props.notes}</p>
+        </div>
+      ) : null}
+
     </div>
   );
 }

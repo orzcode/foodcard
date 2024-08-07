@@ -14,7 +14,7 @@ function InputPane() {
 
 		<div className='InputPane'>
 			<h2>Recipe Name</h2>
-			<InputField />
+			<InputField placeholder="Recipe Name" />
 			<h2>Ingredients</h2>
 			<InputField />
 			<h2>Instructions</h2>
