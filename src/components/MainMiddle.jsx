@@ -15,14 +15,12 @@ function MainMiddle() {
     }
 );
 
-
-
-  return (
+ return (
 
 	<div className="MainMiddle">
 
-    <InputPane />
-    <PreviewPane {...recipe}/>
+    <InputPane setRecipe={setRecipe} recipe={recipe}/>
+    <PreviewPane recipe={recipe}/>
 	
 	</div>
 
