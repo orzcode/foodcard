@@ -11,8 +11,6 @@ function InputField(props) {
 		  //^^specifc property to update, passed in from parent attitribute
 		  //uses object destructuring due to being dynamic
 		}));
-
-		console.log(props.recipe);
 	  };
 
 	const handleInputChange = (event) => {
