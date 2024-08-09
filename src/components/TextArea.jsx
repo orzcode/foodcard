@@ -1,34 +1,27 @@
-import { useState, useRef } from 'react'
-
+import { useState } from "react";
+import ActionButton from "./inputButton";
 
 function TextArea(props) {
-	const [value, setValue] = useState("");
-  
-	const updateRecipeProp = (prop, value) => {
-		props.setRecipe((prevRecipe) => ({
-		  ...prevRecipe,
-		  [props.propName]: value,
-		  //^^specifc property to update, passed in from parent attitribute
-		  //uses object destructuring due to being dynamic
-		}));
+  const [value, setValue] = useState("");
 
-	  };
+  return (
+    <div>
+      <textarea
+        value={value}
+        placeholder={props.placeholder}
+        className="textarea"
+        rows={3}
+        cols={30}
+        onChange={(e) => setValue(e.target.value)}
+      />
+      <ActionButton
+        actionType="apply"
+        value={value}
+        setRecipe={props.setRecipe}
+        propName={props.propName}
+      />
+    </div>
+  );
+}
 
-	const handleInputChange = (event) => {
-		setValue(event.target.value);
-		updateRecipeProp(props.propName, event.target.value)
-	  };
-
-	return (
-	  <textarea
-		value={value}
-		onChange={handleInputChange}
-		placeholder={props.placeholder}
-		className="textarea"
-		rows={3}
-		cols={30}
-	  />
-	);
-  }
-  
-  export default TextArea;
+export default TextArea;

@@ -17,6 +17,8 @@ function InputPane(props) {
 			<h2>Ingredients</h2>
 			<InputField />
 			<h2>Instructions</h2>
+			<InputField />
+			<h2>Notes</h2>
 			<TextArea  placeholder="Optional notes" setRecipe={props.setRecipe} recipe={props.recipe} propName="notes"/>
 		</div>
 

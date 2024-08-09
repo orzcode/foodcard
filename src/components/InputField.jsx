@@ -1,30 +1,30 @@
 import { useState } from 'react'
+import ActionButton from './inputButton';
 
 
 function InputField(props) {
 	const [value, setValue] = useState("");
 
-	const updateRecipeProp = (prop, value) => {
-		props.setRecipe((prevRecipe) => ({
-		  ...prevRecipe,
-		  [props.propName]: value,
-		  //^^specifc property to update, passed in from parent attitribute
-		  //uses object destructuring due to being dynamic
-		}));
-	  };
-
-	const handleInputChange = (event) => {
-		setValue(event.target.value);
-		updateRecipeProp(props.propName, event.target.value)
-	  };
+	// const commonProps = {
+	// 	recipe: props.recipe,
+	// 	setRecipe: props.setRecipe,
+	//   };
 
 	return (
-	  <input
-		type="text"
-		placeholder={props.placeholder}
-		value={value}
-		onChange={handleInputChange}
-	  />
+	  <div>
+		<input
+				type="text"
+				placeholder={props.placeholder}
+				value={value}
+				onChange={(e) => setValue(e.target.value)}
+			  />
+			  <ActionButton 
+				actionType="apply" 
+				value={value} 
+				setRecipe={props.setRecipe} 
+				propName={props.propName} 
+			  />
+	  </div>
 	);
   }
 
