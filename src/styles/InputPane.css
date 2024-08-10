@@ -1,5 +1,21 @@
-textarea {
-  resize: none;
-  overflow: hidden;
-  padding: 10px 5px;
+.InputPane {
+  textarea {
+    resize: none;
+    overflow: hidden;
+  }
+
+  input {
+    min-width: 25rem;
+  }
+
+  h2 ~ div {
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  button {
+  }
 }

@@ -12,8 +12,8 @@ function PreviewPane(props) {
       <div className="ingredients">
         <h3>Ingredients</h3>
         <ul>
-          {props.recipe.ingredients.map((ingredient) => (
-            <li key={ingredient}>{ingredient}</li>
+          {props.recipe.ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
           ))}
         </ul>
       </div>
@@ -21,8 +21,8 @@ function PreviewPane(props) {
       <div className="instructions">
         <h3>Instructions</h3>
         <ol>
-          {props.recipe.instructions.map((instruction) => (
-            <li key={instruction}>{instruction}</li>
+          {props.recipe.instructions.map((instruction, index) => (
+            <li key={index}>{instruction}</li>
           ))}
         </ol>
       </div>

@@ -13,13 +13,13 @@ function InputPane(props) {
 
 		<div className='InputPane'>
 			<h2>Recipe Name</h2>
-			<InputField placeholder="Recipe Name" setRecipe={props.setRecipe} recipe={props.recipe} propName="name"/>
+			<InputField actionType="apply" placeholder="Recipe Name" setRecipe={props.setRecipe} recipe={props.recipe} propName="name"/>
 			<h2>Ingredients</h2>
-			<InputField />
+			<InputField actionType="addItem" placeholder="Ingredient" setRecipe={props.setRecipe} recipe={props.recipe} propName="ingredients" />
 			<h2>Instructions</h2>
-			<InputField />
+			<InputField actionType="addItem" placeholder="Step" setRecipe={props.setRecipe} recipe={props.recipe} propName="instructions"/>
 			<h2>Notes</h2>
-			<TextArea  placeholder="Optional notes" setRecipe={props.setRecipe} recipe={props.recipe} propName="notes"/>
+			<TextArea actionType="apply" placeholder="Optional notes" setRecipe={props.setRecipe} recipe={props.recipe} propName="notes"/>
 		</div>
 
 	)

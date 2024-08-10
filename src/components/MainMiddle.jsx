@@ -8,8 +8,8 @@ function MainMiddle() {
   const [recipe, setRecipe] = useState(
     {
     name: "Recipe Name",
-    ingredients: ["Ingredient 1", "Ingredient 2", "Ingredient 3"],
-    instructions: ["Step 1", "Step 2", "Step 3"],
+    ingredients: [''],
+    instructions: [''],
     notes: null,
     image: null,
     }

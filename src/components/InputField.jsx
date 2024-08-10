@@ -19,8 +19,9 @@ function InputField(props) {
 				onChange={(e) => setValue(e.target.value)}
 			  />
 			  <ActionButton 
-				actionType="apply" 
-				value={value} 
+				actionType={props.actionType}
+				value={value}
+				recipe={props.recipe}
 				setRecipe={props.setRecipe} 
 				propName={props.propName} 
 			  />

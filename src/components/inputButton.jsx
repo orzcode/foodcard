@@ -11,17 +11,20 @@ function ActionButton(props) {
   };
 
   //for multiple add button
-  const handleAddItem = () => {
-    const newValues = [props.recipe[propName]];
-    const currentValue = value.trim();
-    if (currentValue !== "") {
-      newValues[index] = currentValue;
-      props.setRecipe((prevRecipe) => ({
-        ...prevRecipe,
-        [props.propName]: [...newValues, ""], // Adds the new value and an empty string for the next input field
-      }));
-    }
-  };
+const handleAddItem = () => {
+  const newValues = [...props.recipe[props.propName]]; // copy of the array
+  const currentValue = props.value.trim();
+  
+  if (currentValue !== "") {
+    newValues.push(currentValue); // Add the current input field value to the array
+    props.setRecipe((prevRecipe) => ({
+      ...prevRecipe,
+      [props.propName]: [...newValues], // Update the (sub)array with the ingredient or whatever
+    }));
+  }
+  
+};
+  
 
   const handleClick = () => {
     if (props.actionType === 'apply') {

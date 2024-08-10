@@ -10,13 +10,14 @@ function TextArea(props) {
         value={value}
         placeholder={props.placeholder}
         className="textarea"
-        rows={3}
+        rows={6}
         cols={30}
         onChange={(e) => setValue(e.target.value)}
       />
       <ActionButton
         actionType="apply"
         value={value}
+        recipe={props.recipe}
         setRecipe={props.setRecipe}
         propName={props.propName}
       />
