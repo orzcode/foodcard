@@ -21,6 +21,7 @@ function InputField(props) {
 			  <ActionButton 
 				actionType={props.actionType}
 				value={value}
+				setValue={setValue}
 				recipe={props.recipe}
 				setRecipe={props.setRecipe} 
 				propName={props.propName} 

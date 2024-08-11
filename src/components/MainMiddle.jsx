@@ -7,7 +7,7 @@ import PreviewPane from "./PreviewPane";
 function MainMiddle() {
   const [recipe, setRecipe] = useState(
     {
-    name: "Recipe Name",
+    name: "Start your recipe!",
     ingredients: [''],
     instructions: [''],
     notes: null,

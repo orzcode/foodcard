@@ -17,6 +17,7 @@ function TextArea(props) {
       <ActionButton
         actionType="apply"
         value={value}
+        setValue={setValue}
         recipe={props.recipe}
         setRecipe={props.setRecipe}
         propName={props.propName}
