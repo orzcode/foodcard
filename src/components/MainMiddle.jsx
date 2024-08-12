@@ -8,7 +8,7 @@ function MainMiddle() {
   const [recipe, setRecipe] = useState(
     {
     name: "Start your recipe!",
-    ingredients: [''],
+    ingredients: [],
     instructions: [''],
     notes: null,
     image: null,

@@ -11,10 +11,14 @@ function PreviewPane(props) {
 
       <div className="ingredients">
         <h3>Ingredients</h3>
-        <ul>        
-          {props.recipe.ingredients.map((ingredient, index) => (
-            <li key={index}>{ingredient}</li>
-          ))}
+        <ul>
+          {props.recipe.ingredients.length === 0 ? (
+            <li>&nbsp;</li> // Empty bullet point
+          ) : (
+            props.recipe.ingredients.map((ingredient, index) => (
+              ingredient !== "" && <li key={index}>{ingredient}</li>
+            ))
+          )}
         </ul>
       </div>
 
