@@ -25,9 +25,13 @@ function PreviewPane(props) {
       <div className="instructions">
         <h3>Instructions</h3>
         <ol>
-          {props.recipe.instructions.map((instruction, index) => (
-            <li key={index}>{instruction}</li>
-          ))}
+        {props.recipe.instructions.length === 0 ? (
+            <li>&nbsp;</li> // Empty bullet point
+          ) : (
+            props.recipe.instructions.map((instruction, index) => (
+              instruction !== "" && <li key={index}>{instruction}</li>
+            ))
+          )}
         </ol>
       </div>
 

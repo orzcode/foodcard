@@ -9,7 +9,7 @@ function MainMiddle() {
     {
     name: "Start your recipe!",
     ingredients: [],
-    instructions: [''],
+    instructions: [],
     notes: null,
     image: null,
     }

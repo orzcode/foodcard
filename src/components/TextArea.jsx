@@ -15,7 +15,7 @@ function TextArea(props) {
         onChange={(e) => setValue(e.target.value)}
       />
       <ActionButton
-        actionType="apply"
+        actionType="applyAndClear"
         value={value}
         setValue={setValue}
         recipe={props.recipe}

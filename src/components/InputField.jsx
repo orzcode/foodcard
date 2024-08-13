@@ -18,8 +18,8 @@ function InputField(props) {
         setValue={setValue}
         recipe={props.recipe}
         setRecipe={props.setRecipe} 
-        propName={props.propName} 
-        index={props.index} // Pass the index of the ingredient to identify it
+        propName={props.propName} // Pass the name of the recipe property to identify it -> ingredients or instructions
+        index={props.index} // Pass the index of the item to identify it
       />
     </div>
   );

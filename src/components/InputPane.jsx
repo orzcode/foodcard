@@ -17,12 +17,13 @@ function InputPane(props) {
       />
 
       <h2>Ingredients</h2>
-      <ul>        
+      <ul>                
+        {/* Note - this of course re-renders once a change occurs
+        so the index is only needed here on this re-rendered version, not the 'blank' one below */}
         {props.recipe.ingredients.map((ingredient, index) => (
           <InputField 
             key={index} 
             actionType="apply" 
-            placeholder="Ingredient" 
             setRecipe={props.setRecipe} 
             recipe={props.recipe} 
             propName="ingredients" 
@@ -32,7 +33,7 @@ function InputPane(props) {
         ))}
         {/* Add one empty field at the end */}
         <InputField 
-          actionType="addItem" 
+          actionType="applyAndClear" 
           placeholder="Add new ingredient" 
           setRecipe={props.setRecipe} 
           recipe={props.recipe} 
@@ -40,14 +41,29 @@ function InputPane(props) {
         />
       </ul>
 
+
       <h2>Instructions</h2>
-      <InputField 
-        actionType="addItem" 
-        placeholder="Step" 
-        setRecipe={props.setRecipe} 
-        recipe={props.recipe} 
-        propName="instructions"
-      />
+      <ol>
+      {props.recipe.instructions.map((instruction, index) => (
+          <InputField 
+            key={index} 
+            actionType="apply" 
+            setRecipe={props.setRecipe} 
+            recipe={props.recipe} 
+            propName="instructions" 
+            initialValue={instruction} 
+            index={index}
+          />
+        ))}
+        {/* Add one empty field at the end */}
+        <InputField 
+          actionType="applyAndClear"
+          placeholder="Add instruction" 
+          setRecipe={props.setRecipe} 
+          recipe={props.recipe} 
+          propName="instructions"
+        />
+      </ol>
 
       <h2>Notes</h2>
       <TextArea 
