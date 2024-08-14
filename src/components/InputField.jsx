@@ -1,25 +1,29 @@
-import React, { useState } from 'react';
-import ActionButton from './inputButton';
+import React, { useState } from "react";
+import ActionButton from "./ActionButton";
+import {
+  handleKeyDown,
+  handleValueChange,
+  handleAction,
+} from "./inputUtils"; 
 
 function InputField(props) {
-  const [value, setValue] = useState(props.initialValue || ""); // Start with the initial value
+  const [value, setValue] = useState(props.initialValue || "");
 
   return (
     <div>
       <input
         type="text"
+        value={value}
+        onChange={handleValueChange(setValue)}
+        onKeyDown={(e) =>
+          handleKeyDown(e, () => handleAction({ value, setValue, ...props }))
+        }
         placeholder={props.placeholder}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
       />
-      <ActionButton 
-        actionType={props.actionType}
-        value={value}
-        setValue={setValue}
-        recipe={props.recipe}
-        setRecipe={props.setRecipe} 
-        propName={props.propName} // Pass the name of the recipe property to identify it -> ingredients or instructions
-        index={props.index} // Pass the index of the item to identify it
+      <ActionButton
+        handleAction={() =>
+          handleAction({ actionType: props.actionType, value, setValue, ...props })
+        }
       />
     </div>
   );

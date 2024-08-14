@@ -1,8 +1,13 @@
-import { useState } from "react";
-import ActionButton from "./inputButton";
+import React, { useState } from "react";
+import ActionButton from "./ActionButton";
+import {
+  handleKeyDown,
+  handleValueChange,
+  handleAction,
+} from "./inputUtils"; 
 
 function TextArea(props) {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(props.initialValue || "");
 
   return (
     <div>
@@ -11,16 +16,16 @@ function TextArea(props) {
         placeholder={props.placeholder}
         className="textarea"
         rows={6}
-        cols={30}
-        onChange={(e) => setValue(e.target.value)}
+        cols={31}
+        onChange={handleValueChange(setValue)}
+        onKeyDown={(e) =>
+          handleKeyDown(e, () => handleAction({ value, setValue, ...props }))
+        }
       />
       <ActionButton
-        actionType={props.actionType}
-        value={value}
-        setValue={setValue}
-        recipe={props.recipe}
-        setRecipe={props.setRecipe}
-        propName={props.propName}
+        handleAction={() =>
+          handleAction({ actionType: props.actionType, value, setValue, ...props })
+        }
       />
     </div>
   );
