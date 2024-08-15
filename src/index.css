@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme:  dark;
   color: whitesmoke;
   background-color: #242424;
 
@@ -22,7 +22,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
 }
 html {
   font-size: 62.5%;
@@ -62,3 +62,7 @@ h1 {
   font-size: clamp(3.3rem, 5vw, 4.5rem);
 }
 /* ----------------------------------------- */
+input[type=text]:focus, textarea:focus {
+outline: 1px solid transparent;
+
+}

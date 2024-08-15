@@ -1,25 +1,32 @@
-import { useState } from "react";
-import reactLogo from "../assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "../styles/PreviewPane.css";
 
 function PreviewPane(props) {
 
   return (
     <div className="PreviewPane">
-      <h2>{props.recipe.name}</h2>
-
-      <div className="ingredients">
-        <h3>Ingredients</h3>
-        <ul>
-          {props.recipe.ingredients.length === 0 ? (
-            <li>&nbsp;</li> // Empty bullet point
-          ) : (
-            props.recipe.ingredients.map((ingredient, index) => (
-              ingredient !== "" && <li key={index}>{ingredient}</li>
-            ))
-          )}
-        </ul>
+      <div className="previewUpper">
+        <div className="H2Ingr">
+          <h2>{props.recipe.name}</h2>
+          <div className="ingredients">
+            <h3>Ingredients</h3>
+            <ul>
+              {props.recipe.ingredients.length === 0 ? (
+                <li>&nbsp;</li> // Empty bullet point
+              ) : (
+                props.recipe.ingredients.map((ingredient, index) => (
+                  ingredient !== "" && <li key={index}>{ingredient}</li>
+                ))
+              )}
+            </ul>
+          </div>
+        </div>
+        <img src="https://placehold.co/280?text=Add+a+pic!" alt="Recipe image" />
+        {/* {preview && (
+        <div>
+          <img src={preview} alt="Preview" style={{ width: '200px', height: 'auto' }} />
+        </div>
+      )} */}
       </div>
 
       <div className="instructions">

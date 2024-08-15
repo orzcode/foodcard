@@ -1,6 +1,7 @@
 import React from 'react';
 import InputField from './InputField';
 import TextArea from './TextArea';
+import ImageUpload from './ImageUpload';
 import '../styles/InputPane.css';
 
 function InputPane(props) {
@@ -15,6 +16,8 @@ function InputPane(props) {
         propName="name" 
         initialValue={props.recipe.name}
       />
+
+      <ImageUpload />      
 
       <h2>Ingredients</h2>
       <ul>                
