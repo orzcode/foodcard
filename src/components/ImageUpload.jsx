@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 
-function ImageUpload() {
-  const [image, setImage] = useState(null);
-  const [preview, setPreview] = useState(null);
+function ImageUpload(imgStateProps) {
 
   // Handle the file selection
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
-      setImage(file);
-      setPreview(URL.createObjectURL(file)); // Create a preview URL
+      imgStateProps.setImage(file);
+      imgStateProps.setPreview(URL.createObjectURL(file)); // Create a preview URL
     }
   };
 
@@ -20,9 +18,9 @@ function ImageUpload() {
         accept="image/*" 
         onChange={handleFileUpload} 
       />
-      {/* {preview && (
+      {/* {imgStateProps.preview && (
         <div>
-          <img src={preview} alt="Preview" style={{ width: '200px', height: 'auto' }} />
+          <img src={imgStateProps.preview} alt="Preview" style={{ width: '200px', height: 'auto' }} />
         </div>
       )} */}
     </div>

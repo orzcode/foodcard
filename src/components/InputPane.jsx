@@ -17,7 +17,7 @@ function InputPane(props) {
         initialValue={props.recipe.name}
       />
 
-      <ImageUpload />      
+      <ImageUpload image={props.image} setImage={props.setImage} preview={props.preview} setPreview={props.setPreview}/>      
 
       <h2>Ingredients</h2>
       <ul>                

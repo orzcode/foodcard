@@ -5,6 +5,9 @@ import InputPane from "./InputPane";
 import PreviewPane from "./PreviewPane";
 
 function MainMiddle() {
+  const [image, setImage] = useState(null);
+  const [preview, setPreview] = useState(null);
+
   const [recipe, setRecipe] = useState(
     {
     name: "Start your recipe!",
@@ -19,8 +22,8 @@ function MainMiddle() {
 
 	<div className="MainMiddle">
 
-    <InputPane setRecipe={setRecipe} recipe={recipe}/>
-    <PreviewPane recipe={recipe}/>
+    <InputPane setRecipe={setRecipe} recipe={recipe} image={image} setImage={setImage} preview={preview} setPreview={setPreview}/>
+    <PreviewPane recipe={recipe} preview={preview}/>
 	
 	</div>
 

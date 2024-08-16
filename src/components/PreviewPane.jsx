@@ -1,8 +1,6 @@
-
 import "../styles/PreviewPane.css";
 
 function PreviewPane(props) {
-
   return (
     <div className="PreviewPane">
       <div className="previewUpper">
@@ -14,30 +12,34 @@ function PreviewPane(props) {
               {props.recipe.ingredients.length === 0 ? (
                 <li>&nbsp;</li> // Empty bullet point
               ) : (
-                props.recipe.ingredients.map((ingredient, index) => (
-                  ingredient !== "" && <li key={index}>{ingredient}</li>
-                ))
+                props.recipe.ingredients.map(
+                  (ingredient, index) =>
+                    ingredient !== "" && <li key={index}>{ingredient}</li>
+                )
               )}
             </ul>
           </div>
         </div>
-        <img src="https://placehold.co/280?text=Add+a+pic!" alt="Recipe image" />
-        {/* {preview && (
-        <div>
-          <img src={preview} alt="Preview" style={{ width: '200px', height: 'auto' }} />
-        </div>
-      )} */}
+        <img
+          src={
+            props.preview
+              ? props.preview
+              : "https://placehold.co/280?text=Add+a+pic!"
+          }
+          alt="Preview"
+        />
       </div>
 
       <div className="instructions">
         <h3>Instructions</h3>
         <ol>
-        {props.recipe.instructions.length === 0 ? (
+          {props.recipe.instructions.length === 0 ? (
             <li>&nbsp;</li> // Empty bullet point
           ) : (
-            props.recipe.instructions.map((instruction, index) => (
-              instruction !== "" && <li key={index}>{instruction}</li>
-            ))
+            props.recipe.instructions.map(
+              (instruction, index) =>
+                instruction !== "" && <li key={index}>{instruction}</li>
+            )
           )}
         </ol>
       </div>
@@ -48,7 +50,6 @@ function PreviewPane(props) {
           <p>{props.recipe.notes}</p>
         </div>
       ) : null}
-
     </div>
   );
 }
