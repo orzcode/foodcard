@@ -18,11 +18,6 @@ function ImageUpload(imgStateProps) {
         accept="image/*" 
         onChange={handleFileUpload} 
       />
-      {/* {imgStateProps.preview && (
-        <div>
-          <img src={imgStateProps.preview} alt="Preview" style={{ width: '200px', height: 'auto' }} />
-        </div>
-      )} */}
     </div>
   );
 }

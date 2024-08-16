@@ -20,14 +20,16 @@ function PreviewPane(props) {
             </ul>
           </div>
         </div>
-        <img
-          src={
-            props.preview
-              ? props.preview
-              : "https://placehold.co/280?text=Add+a+pic!"
-          }
-          alt="Preview"
-        />
+
+          <img
+            src={
+              props.preview
+                ? props.preview
+                : "https://placehold.co/280?text=Add+a+pic!"
+            }
+            alt="Preview"
+          />
+
       </div>
 
       <div className="instructions">
