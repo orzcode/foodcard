@@ -1,6 +1,18 @@
+import React, { useRef } from 'react';
+import { useReactToPrint } from 'react-to-print'
+
 import "../styles/PreviewPane.css";
+import PrintButton from "./PrintButton";
 
 function PreviewPane(props) {
+  const previewPaneRef = useRef(null);
+
+  const handlePrint = useReactToPrint({
+    content: () => previewPaneRef.current,
+  });
+  
+
+
   return (
     <div className="PreviewPane">
       <div className="previewUpper">
@@ -52,6 +64,9 @@ function PreviewPane(props) {
           <p>{props.recipe.notes}</p>
         </div>
       ) : null}
+
+      <PrintButton handlePrint={handlePrint}/>
+
     </div>
   );
 }

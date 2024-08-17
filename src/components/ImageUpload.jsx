@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/ImageUpload.css";
 
 function ImageUpload(imgStateProps) {
@@ -31,13 +31,11 @@ function ImageUpload(imgStateProps) {
 
           aria-hidden="true"
           focusable="false"
-          data-prefix="fas"
-          data-icon="upload"
-          className="svg-inline--fa fa-upload fa-w-16"
+
           role="img"
         ><path d="M480-480ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h320v80H200v560h560v-320h80v320q0 33-23.5 56.5T760-120H200Zm40-160h480L570-480 450-320l-90-120-120 160Zm440-320v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Z" />
         </svg>
-        <span>Upload a pic!</span>
+        <span>Add a pic!</span>
       </label>
     </div>
   );

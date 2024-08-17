@@ -1,4 +1,7 @@
 .PreviewPane {
+    position: relative;
+
+
     background-color: white;
     color: black;
     font-family: 'Lato', sans-serif;
@@ -66,5 +69,8 @@ img {
     }
     body {
         background-color: white;
+    }
+    .printButton {
+        display: none;
     }
 }
