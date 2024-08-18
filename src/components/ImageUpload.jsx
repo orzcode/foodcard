@@ -15,7 +15,7 @@ function ImageUpload(imgStateProps) {
     <div className="file-input">
       <input
         type="file"
-        accept="image/*;capture=camera"
+        accept="image/*"
         onChange={handleFileUpload}
         name="file-input"
         id="file-input"
