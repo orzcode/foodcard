@@ -12,7 +12,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift it off the page */
     border: 1px solid #ddd;
     overflow: auto;
-    page-break-inside: avoid; /* Prevent breaking the content in the middle during printing */
+    page-break-inside: avoid;
+    break-inside: avoid; /* Prevent breaking the content in the middle during printing */
 }
 
 .PreviewPane h2, .PreviewPane h3 {
@@ -60,12 +61,17 @@ img {
 
 @media print {
     .PreviewPane {
-        width: 210mm;
-        height: 297mm;
-        padding: 2cm;
+        width: 100%;
+        height: auto;
+        
+        padding: 0;
+        margin: 0;
+
         box-shadow: none;
         border: none;
         overflow: visible;
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
     body {
         background-color: white;
