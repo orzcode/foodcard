@@ -61,15 +61,16 @@ img {
 
 @media print {
     .PreviewPane {
-        width: 100%;
-        height: auto;
-        
-        padding: 0;
-        margin: 0;
+        width: 210mm;
+        height: 297mm;
 
+        padding: 2cm;
         box-shadow: none;
         border: none;
         overflow: visible;
+
+        background-color: blue;
+
         page-break-inside: avoid;
         break-inside: avoid;
     }
