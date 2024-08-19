@@ -1,0 +1,9 @@
+{
+  "name": "Foodcard",
+  "short_name": "Foodcard",
+  "description": "A recipe builder, made with Vite + React",
+  "start_url": "/?homescreen=1",
+  "background_color": "#2e2b2d",
+  "theme_color": "#22334b",
+  "icons":[{"src":"/src/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/src/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}]
+}
