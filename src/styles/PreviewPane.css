@@ -2,7 +2,7 @@
     position: relative;
 
 
-    background-color: blue;
+    background-color: #fff;
     
     color: black;
     font-family: 'Lato', sans-serif;
@@ -62,23 +62,27 @@ img {
 
 @media print {
     .PreviewPane {
-        width: 210mm;
-        height: 297mm;
+        height: 99%;
+        width: 99%;
 
-        padding: 2cm;
+        box-sizing: border-box;
+
+        margin: 0;
+        padding: 0;
+
         box-shadow: none;
         border: none;
         overflow: visible;
 
         
-
+        page-break-after: avoid;
+        page-break-before: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
     }
-    body {
-        background-color: white;
-    }
+
     .printButton {
         display: none;
+        page-break-after: avoid;
     }
 }
