@@ -2,7 +2,8 @@
     position: relative;
 
 
-    background-color: white;
+    background-color: blue;
+    
     color: black;
     font-family: 'Lato', sans-serif;
     width: 794px; /* Approximate width of A4 in pixels at 96dpi */
@@ -69,7 +70,7 @@ img {
         border: none;
         overflow: visible;
 
-        background-color: blue;
+        
 
         page-break-inside: avoid;
         break-inside: avoid;
