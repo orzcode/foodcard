@@ -14,7 +14,7 @@ function PreviewPane(props) {
 
 
   return (
-    <div className="PreviewPane">
+    <div className="PreviewPane" ref={previewPaneRef}>
       <div className="previewUpper">
         <div className="H2Ingr">
           <h2>{props.recipe.name}</h2>
