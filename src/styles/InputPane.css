@@ -5,7 +5,8 @@
   }
 
   input {
-    /* min-width: 25rem; */
+    width: 25rem;
+   max-width: 80%;
   }
 
   div {

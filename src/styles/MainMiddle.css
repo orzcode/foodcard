@@ -31,10 +31,12 @@
 		tldr: above implementations are fine as long as this^ is resolved
 	*/
 
-   /* .MainMiddle{
-	flex-direction: column;
-   } */
-   /* .PreviewPane, .InputPane {
-	width: 100vw;
-   } */
+   .MainMiddle{
+	/* flex-direction: column; */
+	padding: 1rem;
+	gap: 1rem;
+   }
+   .PreviewPane, .InputPane {
+	width: 100%
+   }
 }

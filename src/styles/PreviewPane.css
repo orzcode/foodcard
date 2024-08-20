@@ -1,13 +1,8 @@
 .PreviewPane {
     position: relative;
-
-
     background-color: #fff;
-    
     color: black;
     font-family: 'Lato', sans-serif;
-     /*width: 794px; Approximate width of A4 in pixels at 96dpi */
-    /*min-height: 1122px;  Approximate height of A4 in pixels at 96dpi */
     min-height: 80vh;
     max-height: 90vh;
     padding: 2cm; /* Similar to a typical print margin */
@@ -28,7 +23,6 @@
     margin-bottom: 1.5rem;
 }
 
-
 .PreviewPane ul li, .PreviewPane ol li {
     line-height: 1.6;
     font-size: 1.2rem;
@@ -44,6 +38,7 @@
     display: flex;
     justify-content: space-between;    
     margin-bottom: 1rem;
+    gap: 1rem;
 }
 
 .H2Ingr{
@@ -53,31 +48,27 @@
     justify-content: space-between;
 }
 
+
 img {
-    border-radius: 1rem;
     width: 100%;
-    max-width: 280px;
-    height: 280px;
+    max-width: 280px; 
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 1rem;
     object-fit: cover;
+    aspect-ratio: 1;
 }
 
 @media print {
     .PreviewPane {
         box-sizing: border-box;
-
         background-color: aquamarine;
-
         width: auto;
         height: auto;
-
         padding-bottom: 0;
         margin-bottom: 0;
-
         box-shadow: none;
         border: none;
         overflow: visible;
-
-        
         page-break-after: avoid;
         page-break-before: avoid;
         page-break-inside: avoid;
