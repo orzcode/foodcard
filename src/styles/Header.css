@@ -5,8 +5,7 @@
 	width: 100%;
 	text-align: center;
 	flex-grow: 0;
-	flex-shrink: 0;
-	margin: auto;
+	flex-shrink: 1;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;

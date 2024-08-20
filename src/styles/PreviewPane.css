@@ -6,9 +6,10 @@
     
     color: black;
     font-family: 'Lato', sans-serif;
-    width: 794px; /* Approximate width of A4 in pixels at 96dpi */
-    min-height: 1122px; /* Approximate height of A4 in pixels at 96dpi */
-    max-height: 100vh;
+     /*width: 794px; Approximate width of A4 in pixels at 96dpi */
+    /*min-height: 1122px;  Approximate height of A4 in pixels at 96dpi */
+    min-height: 80vh;
+    max-height: 90vh;
     padding: 2cm; /* Similar to a typical print margin */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift it off the page */
     border: 1px solid #ddd;

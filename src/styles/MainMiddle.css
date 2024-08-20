@@ -4,6 +4,7 @@
 	width: 100%;
 	height: 100%;
 	flex-grow: 1;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-evenly;
   }
@@ -14,7 +15,26 @@
   }
 
 @media all and (max-width: 1200px) {
-   .MainMiddle{
+	/* Solution for wrapping: 
+	
+		Either flex-direction column (as a media Q at desired breakpoint)
+		or flex-wrap initially, and force widths of children if needed
+
+		additionally, a media Q at desired breakpoint to make children full-width 
+		can be used in either, esp to force the wrap
+
+
+		Current problem: picture (or some othe el) is too forcibly big, 
+		so at mobile sizes this forces entire html container to expand, 
+		which LOOKS like an issue with the other children (but isn't)
+		
+		tldr: above implementations are fine as long as this^ is resolved
+	*/
+
+   /* .MainMiddle{
 	flex-direction: column;
-   }
+   } */
+   /* .PreviewPane, .InputPane {
+	width: 100vw;
+   } */
 }
