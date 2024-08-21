@@ -8,6 +8,7 @@ function PreviewPane(props) {
   const previewPaneRef = useRef(null);
 
   const handlePrint = useReactToPrint({
+    preserveAfterPrint: true,
     content: () => previewPaneRef.current,
     documentTitle: "Recipe - " + props.recipe.name
   });
