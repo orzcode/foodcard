@@ -61,10 +61,10 @@ img {
 @media print {
     .PreviewPane {
         box-sizing: border-box;
-        background-color: aquamarine;
+        /* background-color: aquamarine; */
 
-        min-height: 1120px;
-        max-height: 1121px;
+        /* min-height: 1120px;
+        max-height: 1120px; */
 
         padding-bottom: 0;
         margin-bottom: 0;
