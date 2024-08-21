@@ -62,8 +62,10 @@ img {
     .PreviewPane {
         box-sizing: border-box;
         background-color: aquamarine;
-        width: auto;
-        height: 99%;
+
+        min-height: 1120px;
+        max-height: 1121px;
+
         padding-bottom: 0;
         margin-bottom: 0;
         box-shadow: none;
