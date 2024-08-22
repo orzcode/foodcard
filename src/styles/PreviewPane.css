@@ -66,26 +66,24 @@ but max width needed to enforce text wrapping!?*/
 
 @media all and (max-width: 1200px) {
     .previewUpper {
-       flex-wrap: wrap;
+       /* flex-wrap: wrap; */
+       flex-direction: column;
       justify-content: center;
+      align-items: center;
+    }
+
+    .H2Ingr {
+        min-width: 100%;
     }
     .PreviewPane {
         padding: 1rem;
 
         overflow: visible;        
         max-height: 100%;
-        /*remove scrollbar causes overflow
-        need to set explicit max-height 
+        /*remove scrollbar causes overflow,
+        needed to set explicit max-height 
         a bit mysterious IMO but whatever */
     }
-
-    /* RESOLVE THIS - TEMP FIX */
-    /* .printButton {
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        } */
-    /* RESOLVE THIS - TEMP FIX */
 }
 
 @media print {
