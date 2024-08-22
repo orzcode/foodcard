@@ -60,6 +60,14 @@ h1 {
   filter: drop-shadow(1px 1px 1px black);
   font-size: clamp(3.3rem, 5vw, 4.5rem);
 }
+
+h2 {
+  font-size: clamp(2.5rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+}
 /* ----------------------------------------- */
 input[type=text]:focus, textarea:focus {
 outline: 1px solid transparent;

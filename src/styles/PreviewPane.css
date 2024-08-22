@@ -20,7 +20,6 @@
 }
 
 .PreviewPane h2, .PreviewPane h3 {
-    font-weight: bold;
     margin-bottom: 1rem;
 }
 
@@ -50,13 +49,13 @@
 .H2Ingr{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 50%;
     justify-content: space-between;
 }
 img {
     width: 100%;
     max-width: 280px; 
-    height: auto; /* Maintain aspect ratio */
+    max-height: 280px; /* Maintain aspect ratio */
     border-radius: 1rem;
     object-fit: cover;
     aspect-ratio: 1;
@@ -81,10 +80,11 @@ but max width needed to enforce text wrapping!?*/
     }
 
     /* RESOLVE THIS - TEMP FIX */
-    .printButton {
-        display: none;
-        page-break-after: avoid;
-    }
+    /* .printButton {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        } */
     /* RESOLVE THIS - TEMP FIX */
 }
 

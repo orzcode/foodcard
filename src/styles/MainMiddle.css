@@ -34,9 +34,10 @@
    .MainMiddle{
 	/* flex-direction: column; */
 	padding: 1rem;
-	gap: 1rem;
+	padding: 5%;
+	gap: 2rem;
    }
    .PreviewPane, .InputPane {
-	width: 100%
+	width: 100%;
    }
 }

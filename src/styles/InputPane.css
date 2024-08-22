@@ -5,7 +5,8 @@
   }
 
   input {
-    width: 25rem;
+    min-width: 25rem;
+    width: 80%;
    max-width: 80%;
   }
 
@@ -18,7 +19,7 @@
   }
 
   h2 {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
   }
 
 }
