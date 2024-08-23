@@ -9,20 +9,20 @@ function MainMiddle() {
   const [preview, setPreview] = useState(null);
 
   const [recipe, setRecipe] = useState(
-    {
-    name: "Start your recipe!",
-    ingredients: [],
-    instructions: [],
-    notes: null,
-    image: null,
-    }
     // {
-    // name: "Plate of eggs with sauce and other condiments",
-    // ingredients: ['Dirt', 'giant pile of shit', 'giant pile of blood', 'giant pile of grass', 'giant pile of dirt', 'giant pile of shit', 'giant pile of blood', 'giant pile of grass', 'giant pile of dirt'],
-    // instructions: ['Dirt', 'giant pile of shit', 'giant pile of blood', 'giant pile of grass', 'giant pile of dirt', 'giant pile of shit', 'giant pile of blood', 'giant pile of grass', 'giant pile of dirt'],
-    // notes: "asfgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shit",
+    // name: "Start your recipe!",
+    // ingredients: [],
+    // instructions: [],
+    // notes: null,
     // image: null,
     // }
+    {
+    name: "Plate of eggs with sauce and other condiments",
+    ingredients: ['Dirt', 'giant pile of shit', 'giant pile of blood', 'giant pile of grass', 'giant pile of dirt', 'giant pile of shit', 'giant pile of blood', 'giant pile of grass', 'giant pile of dirt'],
+    instructions: ['Dirt', 'giant pile of shit', 'giant pile of blood', 'giant pile of grass', 'giant pile of dirt', 'giant pile of shit', 'giant pile of blood', 'giant pile of grass', 'giant pile of dirt'],
+    notes: "asfgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shitgiant pile of shit",
+    image: null,
+    }
 );
 
  return (

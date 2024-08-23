@@ -5,14 +5,16 @@
     font-family: 'Lato', sans-serif;
 
     min-height: 80vh;
-    max-height: 90vh;
+    /* min-height: 1122px; */
+
+    width: 794px;    
 
     word-wrap: break-word; /* Ensures long words break onto the next line */
     overflow-wrap: break-word; /* Modern equivalent, handles long words */
     word-break: break-word; /* Modern equivalent, handles long words */
 
     padding: 2cm; /* Similar to a typical print margin */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* A subtle shadow to lift it off the page */
+    box-shadow: 5px 5px 25px rgb(0, 0, 0); /* A subtle shadow to lift it off the page */
     border: 1px solid #ddd;
     overflow: auto;
     page-break-inside: avoid;
@@ -77,7 +79,7 @@ but max width needed to enforce text wrapping!?*/
     }
     .PreviewPane {
         padding: 1rem;
-
+        width: 100%;
         overflow: visible;        
         max-height: 100%;
         /*remove scrollbar causes overflow,

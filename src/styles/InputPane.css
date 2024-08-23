@@ -1,23 +1,25 @@
 .InputPane {
-  
-  height: 80vh;
-  max-height: 90vh;
+  min-height: 80vh;  
+
+  width: 794px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 
+  box-shadow: 5px 5px 25px rgb(0, 0, 0);
+  background-color: var(--header);
 
- 
+
+
   textarea {
     resize: none;
     overflow: hidden;
   }
 
-
   input {
-width: 25rem;
-   max-width: 80%;
+    width: 25rem;
+    max-width: 80%;
   }
 
   div {
@@ -27,13 +29,14 @@ width: 25rem;
     gap: 2rem;
     padding: 1rem;
   }
-  /* div:has(input) {
-    margin-bottom: 2.5rem;
-  } */
-
 
   h2 {
     padding: 0.5rem 1rem;
   }
-
+}
+@media all and (max-width: 1200px) {
+ .InputPane {
+  width: 100%;
+ }
+ /*This doesn't work unless applied here, wtf*/
 }
