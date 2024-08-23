@@ -33,6 +33,14 @@
   h2 {
     padding: 0.5rem 1rem;
   }
+
+  button img {
+    /*only applies to the update icon*/
+    height: calc(2rem + 1vw);
+    rotate: 90deg;
+    transform: scaleX(-1);
+  }
+
 }
 @media all and (max-width: 1200px) {
  .InputPane {
