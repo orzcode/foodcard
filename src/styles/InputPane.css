@@ -34,6 +34,7 @@
     padding: 0.5rem 1rem;
   }
 
+/*--------------------------------------------*/
   button img {
     /*only applies to the update icon image*/
     width: calc(20px + 1vw);
@@ -49,13 +50,13 @@
     /*has a weird border otherwise*/
     border-radius: 5px;
     padding: 6px 8px 0px 8px;
-    background-color: var(--highlighted); 
+    background-color: var(--highlighted);
   }
 
   button:has(img):hover{
     filter: brightness(110%);
   }
-
+/*--------------------------------------------*/
 }
 @media all and (max-width: 1200px) {
  .InputPane {
