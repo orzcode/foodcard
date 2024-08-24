@@ -4,6 +4,11 @@ import TextArea from './TextArea';
 import ImageUpload from './ImageUpload';
 import '../styles/InputPane.css';
 
+import { Accordion } from 'rsuite';
+import 'rsuite/dist/rsuite-no-reset.min.css'
+
+// https://rsuitejs.com/components/accordion/
+
 function InputPane(props) {
   return (
     <div className='InputPane'>
