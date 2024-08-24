@@ -19,6 +19,15 @@
     overflow: auto;
     page-break-inside: avoid;
     break-inside: avoid; /* Prevent breaking the content in the middle during printing */
+
+    img {
+        width: 100%;
+        max-width: 280px; 
+        max-height: 280px; /* Maintain aspect ratio */
+        border-radius: 1rem;
+        object-fit: cover;
+        aspect-ratio: 1;
+    }
 }
 
 .PreviewPane h2, .PreviewPane h3 {
@@ -54,14 +63,7 @@
     max-width: 50%;
     justify-content: space-between;
 }
-img {
-    width: 100%;
-    max-width: 280px; 
-    max-height: 280px; /* Maintain aspect ratio */
-    border-radius: 1rem;
-    object-fit: cover;
-    aspect-ratio: 1;
-}
+
 /*-- problem - image gets wonky if parent has max width
 but max width needed to enforce text wrapping!?*/
 /*--------------------------------------------*/

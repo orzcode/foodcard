@@ -35,10 +35,25 @@
   }
 
   button img {
-    /*only applies to the update icon*/
-    height: calc(2rem + 1vw);
-    rotate: 90deg;
+    /*only applies to the update icon image*/
+    width: calc(20px + 1vw);
+    height: auto;
+
+    rotate: 90deg;    
     transform: scaleX(-1);
+    display: block;
+  }
+
+  button:has(img) {
+    border: none;
+    /*has a weird border otherwise*/
+    border-radius: 5px;
+    padding: 6px 8px 0px 8px;
+    background-color: var(--highlighted);
+  }
+
+  button:has(img):hover{
+    filter: brightness(110%);
   }
 
 }
