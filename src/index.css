@@ -73,3 +73,13 @@ input[type=text]:focus, textarea:focus {
 outline: 1px solid transparent;
 }
 /* ----------------------------------------- */
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+input[type="checkbox"]:checked ~ .accordion-content {
+  max-height: 500px; /* Adjust as needed */
+}

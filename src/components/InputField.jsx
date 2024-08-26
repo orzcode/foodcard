@@ -10,7 +10,7 @@ function InputField(props) {
   const [value, setValue] = useState(props.initialValue || "");
 
   return (
-    <div>
+    <>
       <input
         type="text"
         value={value}
@@ -25,7 +25,7 @@ function InputField(props) {
           handleAction({ actionType: props.actionType, value, setValue, ...props })
         }
       />
-    </div>
+    </>
   );
 }
 

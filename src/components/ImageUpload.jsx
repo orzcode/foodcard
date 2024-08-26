@@ -12,6 +12,7 @@ function ImageUpload(imgStateProps) {
   };
 
   return (
+    <>
     <div className="file-input">
       <input
         type="file"
@@ -38,6 +39,8 @@ function ImageUpload(imgStateProps) {
         <span>Add a pic!</span>
       </label>
     </div>
+
+    </>
   );
 }
 

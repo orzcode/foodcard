@@ -10,7 +10,7 @@ function TextArea(props) {
   const [value, setValue] = useState(props.initialValue || "");
 
   return (
-    <div>
+    <>
       <textarea
         value={value}
         placeholder={props.placeholder}
@@ -27,7 +27,7 @@ function TextArea(props) {
           handleAction({ actionType: props.actionType, value, setValue, ...props })
         }
       />
-    </div>
+    </>
   );
 }
 

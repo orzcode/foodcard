@@ -1,5 +1,5 @@
 .InputPane {
-  min-height: 80vh;  
+  min-height: 80vh;
 
   width: 794px;
 
@@ -9,8 +9,6 @@
 
   box-shadow: 5px 5px 25px rgb(0, 0, 0);
   background-color: var(--header);
-
-
 
   textarea {
     resize: none;
@@ -22,25 +20,44 @@
     max-width: 80%;
   }
 
-  div {
+  h2 {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .accordion-content {
+/*because the UL and OL 'divs' are 'unique' in the JSX
+ you need to use .accordion-content to control
+ see InputPane.jsx if this doesn't make sense 
+ 
+ in short, this is for the 'content' areas */
     display: flex;
     place-items: center;
     justify-content: space-between;
     gap: 2rem;
+    background-color: green;
     padding: 1rem;
   }
-
-  h2 {
-    padding: 0.5rem 1rem;
+  /*---------------------------------------------*/
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 3.3s ease, padding 3.3s ease;
+    /* Start with no padding to avoid issues with the transition */
   }
 
-/*---------------------------------------------*/
+  /* Expand content when visible */
+  .accordion-section .accordion-content {
+    max-height: 300px; /* Adjust based on your content */
+  }
+  /*---------------------------------------------*/
   button img {
     /*only applies to the update icon image*/
     width: calc(20px + 1vw);
     height: auto;
 
-    rotate: 90deg;    
+    rotate: 90deg;
     transform: scaleX(-1);
     display: block;
   }
@@ -53,14 +70,15 @@
     background-color: var(--highlighted);
   }
 
-  button:has(img):hover{
+  button:has(img):hover {
     filter: brightness(110%);
   }
-/*--------------------------------------------*/
 }
+/*--------------------------------------------*/
+
 @media all and (max-width: 1200px) {
- .InputPane {
-  width: 100%;
- }
- /*This doesn't work unless applied here, wtf*/
+  .InputPane {
+    width: 100%;
+  }
+  /*This doesn't work unless applied here, wtf*/
 }
