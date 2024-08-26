@@ -26,31 +26,24 @@
     user-select: none;
   }
 
-  .accordion-content {
-/*because the UL and OL 'divs' are 'unique' in the JSX
- you need to use .accordion-content to control
- see InputPane.jsx if this doesn't make sense 
- 
- in short, this is for the 'content' areas */
-    display: flex;
-    place-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    background-color: green;
-    padding: 1rem;
-  }
-  /*---------------------------------------------*/
-  .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 3.3s ease, padding 3.3s ease;
-    /* Start with no padding to avoid issues with the transition */
-  }
+/* Accordion content default state */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  transition: max-height 0.2s ease, padding 0.2s ease;
+}
 
-  /* Expand content when visible */
-  .accordion-section .accordion-content {
-    max-height: 300px; /* Adjust based on your content */
-  }
+/* Accordion content expanded state */
+.accordion-section.active .accordion-content {
+  max-height: 500px; /* Adjust as necessary */
+  padding: 1rem;
+  background-color: green;
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
   /*---------------------------------------------*/
   button img {
     /*only applies to the update icon image*/
