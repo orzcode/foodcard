@@ -45,6 +45,9 @@
   display: flex;
   flex-direction: column;
 
+  /* https://www.youtube.com/watch?v=owFsdm8q7rM
+  https://www.youtube.com/watch?v=B_n4YONte5A */
+
   justify-content: space-between;
   
   transition: all 0.3s ease;
