@@ -12,6 +12,7 @@ function ImageUpload(imgStateProps) {
   };
 
   return (
+    /* - Need to add div here if later adding a second item eg img preview*/ 
     <>
     <div className="file-input">
       <input

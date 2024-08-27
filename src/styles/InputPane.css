@@ -26,23 +26,34 @@
     user-select: none;
   }
 
+  .fieldAndButton {
+    display: flex;
+    width: 100%;
+    place-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
 /* Accordion content default state */
 .accordion-content {
   max-height: 0;
   overflow: hidden;
-  padding: 0;
-  transition: max-height 0.2s ease, padding 0.2s ease;
+  opacity: 0;
+
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  
+  transition: all 0.3s ease;
 }
 
 /* Accordion content expanded state */
 .accordion-section.active .accordion-content {
-  max-height: 500px; /* Adjust as necessary */
-  padding: 1rem;
-  background-color: green;
-  display: flex;
-  place-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  max-height: fit-content; /* Adjust as necessary */
+  opacity: 1;
 }
   /*---------------------------------------------*/
   button img {
