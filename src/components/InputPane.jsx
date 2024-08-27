@@ -11,6 +11,10 @@ function InputPane(props) {
     setOpenSection(openSection === section ? null : section);
   };
 
+  /*- These two are for the accordion functionality -*/
+
+
+
   return (
     <div className="InputPane">
       <div className={`accordion-section ${openSection === "name" ? "active" : ""}`}>
@@ -59,6 +63,18 @@ function InputPane(props) {
               index={index}
             />
           ))}
+          {/* This however is a UL which is MAPPED from the actual recipe
+          i.e., at pageload, it's EMPTY therefore WONT SPAWN a field
+          and yet the below field will still exist to get started.
+          
+          React magic ensures this populates/spawns more as items get added*/}
+
+
+
+          {/* This is the initial field, rendered simply as part of the component,
+          and should in theory always be the last input field
+          
+          This is a 'placeholder' for the user to add new ingredients*/}
           <InputField
             actionType="applyAndClear"
             placeholder="Add new ingredient"

@@ -33,7 +33,7 @@ function handleKeyDown(event, actionHandler) {
 	}
   }
   
-  // Handles adding a new item and clearing the input field
+  // Handles sub-array items eg ingredients or instructions
   function handleAndClear({ value, setValue, setRecipe, propName, recipe }) {
 	const recipeSubArrayCopy = [...recipe[propName]];
 	const currentInputValue = value.trim();
