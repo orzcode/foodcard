@@ -1,12 +1,9 @@
 .InputPane {
   min-height: 80vh;
-
   width: 794px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   box-shadow: 5px 5px 25px rgb(0, 0, 0);
   background-color: var(--header);
 
@@ -34,42 +31,44 @@
     gap: 2rem;
   }
 
-/* Accordion content default state */
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
+  /* Accordion content default state */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.6s ease;
+  }
 
-  padding: 1rem;
 
-  display: flex;
-  flex-direction: column;
+  .accordion-section {
+    outline: 1px solid white;
 
-  /* https://www.youtube.com/watch?v=owFsdm8q7rM
-  https://www.youtube.com/watch?v=B_n4YONte5A */
+/* Make the active section fill available space */
+/* remove these to revert */
+    flex-shrink: 0;
+    transition: flex-grow 0.6s ease;
+  }
+  /* Accordion content expanded state */
+  .accordion-section.active {
+    flex-grow: 1; 
+  }
+/* Make the active section fill available space */
 
-  justify-content: space-between;
-  
-  transition: all 0.6s ease;
-}
 
-.accordion-section {
-  outline: 1px solid white;
-}
+  .accordion-section.active .accordion-content {
+    max-height: 100%;
+    flex-grow: 1;
+    height: 100%;
+    opacity: 1;
+  }
 
-/* Accordion content expanded state */
-.accordion-section.active .accordion-content {
-  max-height: 100%;
-  flex-grow: 1;
-  height: 100%;
-  opacity: 1;
-}
-  /*---------------------------------------------*/
   button img {
-    /*only applies to the update icon image*/
     width: calc(20px + 1vw);
     height: auto;
-
     rotate: 90deg;
     transform: scaleX(-1);
     display: block;
@@ -77,7 +76,6 @@
 
   button:has(img) {
     border: none;
-    /*has a weird border otherwise*/
     border-radius: 5px;
     padding: 6px 8px 0px 8px;
     background-color: var(--highlighted);
@@ -87,11 +85,9 @@
     filter: brightness(110%);
   }
 }
-/*--------------------------------------------*/
 
 @media all and (max-width: 1200px) {
   .InputPane {
     width: 100%;
   }
-  /*This doesn't work unless applied here, wtf*/
 }
