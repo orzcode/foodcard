@@ -10,17 +10,21 @@ function InputPane(props) {
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
   };
-
-  /*- These two are for the accordion functionality -*/
-
-
+  /*- Literally just sets the state to the name of the section clicked on
+      In other words, sets the "open section" state - merely a variable - 
+      to the name of the section clicked on, or to nothing (i.e if it's already clicked)-*/
 
   return (
     <div className="InputPane">
       <div className={`accordion-section ${openSection === "name" ? "active" : ""}`}>
+        {/* Has a 'variable' classname based on the above state
+        i.e. - if it matches, it gets the 'active' class */}
+
         <h2 onClick={() => toggleSection("name")} className="accordion-label">
+          {/* will toggle the state */}
           Recipe Name
         </h2>
+        
         <div className="accordion-content">
           <InputField
             actionType="apply"

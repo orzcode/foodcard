@@ -3,9 +3,7 @@
 
   width: 794px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+display: grid;
 
   box-shadow: 5px 5px 25px rgb(0, 0, 0);
   background-color: var(--header);
@@ -50,12 +48,16 @@
 
   justify-content: space-between;
   
-  transition: all 0.3s ease;
+  transition: all 0.6s ease;
+}
+
+.accordion-section {
+  outline: 1px solid white;
 }
 
 /* Accordion content expanded state */
 .accordion-section.active .accordion-content {
-  max-height: fit-content; /* Adjust as necessary */
+  max-height: fit-content; 
   opacity: 1;
 }
   /*---------------------------------------------*/
