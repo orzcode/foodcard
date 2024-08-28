@@ -3,7 +3,9 @@
 
   width: 794px;
 
-display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   box-shadow: 5px 5px 25px rgb(0, 0, 0);
   background-color: var(--header);
@@ -57,7 +59,9 @@ display: grid;
 
 /* Accordion content expanded state */
 .accordion-section.active .accordion-content {
-  max-height: fit-content; 
+  max-height: 100%;
+  flex-grow: 1;
+  height: 100%;
   opacity: 1;
 }
   /*---------------------------------------------*/
