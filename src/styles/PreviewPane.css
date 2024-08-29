@@ -68,7 +68,7 @@
 but max width needed to enforce text wrapping!?*/
 /*--------------------------------------------*/
 
-@media all and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .previewUpper {
        /* flex-wrap: wrap; */
        flex-direction: column;
@@ -103,18 +103,11 @@ but max width needed to enforce text wrapping!?*/
       } */
     
     .PreviewPane {
-        box-sizing: border-box;        
+        box-sizing: border-box;
+        min-height: 100vh;
         height: auto;
-        /* size: A4;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        box-shadow: none;
-        border: none;
-        overflow: visible;
-        page-break-after: avoid;
-        page-break-before: avoid;
-        page-break-inside: avoid;
-        break-inside: avoid; */
+        padding: 4rem;
+
     }
     .printButton {
         display: none;
