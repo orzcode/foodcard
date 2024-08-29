@@ -5,7 +5,7 @@ import ImageUpload from "./ImageUpload";
 import "../styles/InputPane.css";
 
 function InputPane(props) {
-  const [openSection, setOpenSection] = useState(null);
+  const [openSection, setOpenSection] = useState("name");
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);

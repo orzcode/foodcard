@@ -15,7 +15,7 @@ function TextArea(props) {
         value={value}
         placeholder={props.placeholder}
         className="textarea"
-        rows={6}
+        rows={8}
         cols={31}
         onChange={handleValueChange(setValue)}
         onKeyDown={(e) =>

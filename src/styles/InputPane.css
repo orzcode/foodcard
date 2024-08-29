@@ -1,5 +1,6 @@
 .InputPane {
-  min-height: 80vh;
+  height: auto;
+  min-height: 50rem;
   width: 794px;
   display: flex;
   flex-direction: column;
@@ -7,14 +8,20 @@
   box-shadow: 5px 5px 25px rgb(0, 0, 0);
   background-color: var(--header);
 
+  outline: 2px solid white;
+  
+
   textarea {
     resize: none;
     overflow: hidden;
+
+    width: 80%;
+    max-width: 50rem;
   }
 
   input {
-    width: 25rem;
-    max-width: 80%;
+    width: 80%;
+    max-width: 50rem;
   }
 
   h2 {
@@ -28,43 +35,51 @@
     width: 100%;
     place-items: center;
     justify-content: space-between;
-    gap: 2rem;
   }
 
   /* Accordion content default state */
   .accordion-content {
-    max-height: 0;
-    overflow: hidden;
+    display: none;
     opacity: 0;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.6s ease;
+    max-height: 0;
+    transition-property: display, opacity;
+    transition-duration: 0.6s;
+    transition-behavior: allow-discrete;
   }
   /* https://www.youtube.com/watch?v=owFsdm8q7rM
   https://www.youtube.com/watch?v=B_n4YONte5A */
 
   .accordion-section {
     outline: 1px solid white;
-
-/* Make the active section fill available space */
-/* remove these to revert */
+    
+    display: flex;
+    flex-direction: column;
+    /* Make the active section fill available space */
+    /* remove these to revert */
     flex-shrink: 0;
     transition: flex-grow 0.6s ease;
   }
   /* Accordion content expanded state */
   .accordion-section.active {
-    flex-grow: 1; 
-  }
-/* Make the active section fill available space */
-
-
-  .accordion-section.active .accordion-content {
-    max-height: 100%;
     flex-grow: 1;
-    height: 100%;
+  }
+  /* Make the active section fill available space */
+
+  .accordion-section.active > .accordion-content {
+    display: flex;
+    flex-direction: column;
     opacity: 1;
+    max-height: 100%;
+    height: 100%;
+    flex-grow: 1;
+    padding: 1rem;
+
+    justify-content: center;
+    align-items: center;
+
+    @starting-style {
+      opacity: 0;
+    }
   }
 
   button img {
