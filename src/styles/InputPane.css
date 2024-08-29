@@ -8,7 +8,7 @@
   box-shadow: 5px 5px 25px rgb(0, 0, 0);
   background-color: var(--header);
 
-  outline: 2px solid white;
+  outline: 1px solid white;
   
 
   textarea {

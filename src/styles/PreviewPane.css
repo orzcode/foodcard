@@ -106,7 +106,7 @@ but max width needed to enforce text wrapping!?*/
         box-sizing: border-box;
         min-height: 100vh;
         height: auto;
-        padding: 4rem;
+        padding: 5rem;
 
     }
     .printButton {

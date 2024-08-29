@@ -5,7 +5,7 @@ function Header() {
 	return (
 
 		<header className='Header'>
-			<h1>Foodcard 🍽️</h1>
+			<h1>Foodcard 🥯</h1>
 		</header>
 
 	)

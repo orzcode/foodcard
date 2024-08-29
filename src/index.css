@@ -12,9 +12,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --header: #22334b;
+  --header: #4b3c2e;
+  --main: #2e2e2e;
+  --highlighted: #76604a;
+
+  /* --header: #22334b;
   --main: #2e2b2d;
-  --highlighted: #365075;
+  --highlighted: #365075; */
 }
 *,
 *::before,
