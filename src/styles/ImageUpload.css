@@ -1,4 +1,32 @@
-.file-input__input {
+.file-input__label {
+	--button-size: calc(1em + 0.2vw); /* Control the button size here */
+	--icon-size: 1.5em; 
+  
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5em; /* Gap between icon and text */
+	user-select: none;
+	border-radius: 5px;
+	white-space: nowrap;
+	padding: calc(0.5 * var(--button-size)) calc(0.6 * var(--button-size));
+	background-color: var(--highlighted);
+  
+	font-size: var(--button-size); /* size of the text */
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  .file-input__label:hover {
+	filter: brightness(110%);
+  }
+  
+  .file-input__label svg {
+	height: var(--icon-size); 
+	width: auto;
+  }
+
+  .file-input__input {
 	width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
@@ -7,28 +35,3 @@
 	z-index: -1;
   }
   
-  .file-input__label {
-	cursor: pointer;
-	display: inline-flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 5px;
-	user-select: none;
-	border-radius: 5px;
-	white-space: nowrap;
-	padding: 10px 12px;
-	background-color: var(--highlighted);
-
-	font-size: initial;
-
-	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-  }
-
-  .file-input__label:hover {
-	filter: brightness(110%);
-  }
-  
-  .file-input__label svg {
-	height: 100%;
-	width: 50%;
-  }

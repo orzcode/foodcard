@@ -5,26 +5,20 @@ import ImageUpload from "./ImageUpload";
 import "../styles/InputPane.css";
 
 function InputPane(props) {
+  // Set the default active section to "name"
   const [openSection, setOpenSection] = useState("name");
 
   const toggleSection = (section) => {
-    setOpenSection(openSection === section ? null : section);
+    // Set the section to active, don't allow deactivation
+    setOpenSection(section);
   };
-  /*- Literally just sets the state to the name of the section clicked on
-      In other words, sets the "open section" state - merely a variable - 
-      to the name of the section clicked on, or to nothing (i.e if it's already clicked)-*/
 
   return (
     <div className="InputPane">
       <div className={`accordion-section ${openSection === "name" ? "active" : ""}`}>
-        {/* Has a 'variable' classname based on the above state
-        i.e. - if it matches, it gets the 'active' class */}
-
         <h2 onClick={() => toggleSection("name")} className="accordion-label">
-          {/* will toggle the state */}
           Recipe Name
         </h2>
-        
         <div className="accordion-content">
           <InputField
             actionType="apply"
@@ -67,18 +61,6 @@ function InputPane(props) {
               index={index}
             />
           ))}
-          {/* This however is a UL which is MAPPED from the actual recipe
-          i.e., at pageload, it's EMPTY therefore WONT SPAWN a field
-          and yet the below field will still exist to get started.
-          
-          React magic ensures this populates/spawns more as items get added*/}
-
-
-
-          {/* This is the initial field, rendered simply as part of the component,
-          and should in theory always be the last input field
-          
-          This is a 'placeholder' for the user to add new ingredients*/}
           <InputField
             actionType="applyAndClear"
             placeholder="Add new ingredient"
