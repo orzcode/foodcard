@@ -9,7 +9,6 @@
   background-color: var(--header);
 
   outline: 1px solid white;
-  
 
   textarea {
     resize: none;
@@ -28,6 +27,10 @@
     padding: 0.5rem 1rem;
     cursor: pointer;
     user-select: none;
+  }
+
+  ul, ol {
+    gap: 1rem;
   }
 
   .fieldAndButton {
@@ -51,7 +54,7 @@
 
   .accordion-section {
     outline: 1px solid white;
-    
+
     display: flex;
     flex-direction: column;
     /* Make the active section fill available space */
@@ -82,25 +85,30 @@
     }
   }
 
-  button img {
-    width: calc(20px + 1vw);
-    height: auto;
-    rotate: 90deg;
-    transform: scaleX(-1);
-    display: block;
-  }
-
-  button:has(img) {
+  /*-----------------------------------------*/
+  /* "apply" button styling */
+  button {
     border: none;
     border-radius: 5px;
-    padding: 6px 8px 0px 8px;
+    padding: 4px 5px 6px 5px;
+
     background-color: var(--highlighted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(3rem, 2vw, 3.2rem);
   }
+  
+  button img {
+width: 100%;
+  }  
 
   button:has(img):hover {
     filter: brightness(110%);
   }
 }
+/*-----------------------------------------*/
 
 @media all and (max-width: 1200px) {
   .InputPane {
