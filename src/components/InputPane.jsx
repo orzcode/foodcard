@@ -50,7 +50,7 @@ function InputPane(props) {
           Ingredients
         </h2>
         <ul className="accordion-content">
-          {props.recipe.ingredients.map((ingredient, index) => (
+          {props.recipe.ingredients.slice(0, 12).map((ingredient, index) => (
             <InputField
               key={index}
               actionType="apply"
@@ -61,13 +61,15 @@ function InputPane(props) {
               index={index}
             />
           ))}
-          <InputField
-            actionType="applyAndClear"
-            placeholder="Add new ingredient"
-            setRecipe={props.setRecipe}
-            recipe={props.recipe}
-            propName="ingredients"
-          />
+          {props.recipe.ingredients.length < 12 && (
+            <InputField
+              actionType="applyAndClear"
+              placeholder="Add new ingredient"
+              setRecipe={props.setRecipe}
+              recipe={props.recipe}
+              propName="ingredients"
+            />
+          )}
         </ul>
       </div>
 
@@ -76,7 +78,7 @@ function InputPane(props) {
           Instructions
         </h2>
         <ol className="accordion-content">
-          {props.recipe.instructions.map((instruction, index) => (
+          {props.recipe.instructions.slice(0, 10).map((instruction, index) => (
             <InputField
               key={index}
               actionType="apply"
@@ -87,13 +89,15 @@ function InputPane(props) {
               index={index}
             />
           ))}
-          <InputField
-            actionType="applyAndClear"
-            placeholder="Add instruction"
-            setRecipe={props.setRecipe}
-            recipe={props.recipe}
-            propName="instructions"
-          />
+          {props.recipe.instructions.length < 10 && (
+            <InputField
+              actionType="applyAndClear"
+              placeholder="Add instruction"
+              setRecipe={props.setRecipe}
+              recipe={props.recipe}
+              propName="instructions"
+            />
+          )}
         </ol>
       </div>
 
