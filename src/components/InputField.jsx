@@ -4,10 +4,19 @@ import {
   handleKeyDown,
   handleValueChange,
   handleAction,
-} from "./inputUtils"; 
+} from "./inputUtils";
+import updateIcon from '../assets/update.png';
+import deleteIcon from '../assets/delete.png';
 
 function InputField(props) {
   const [value, setValue] = useState(props.initialValue || "");
+
+  const handleDelete = () => {
+    props.setRecipe((prevRecipe) => {
+      const updatedArray = prevRecipe[props.propName].filter((_, i) => i !== props.index);
+      return { ...prevRecipe, [props.propName]: updatedArray };
+    });
+  };
 
   return (
     <div className="fieldAndButton">
@@ -24,6 +33,11 @@ function InputField(props) {
         handleAction={() =>
           handleAction({ actionType: props.actionType, value, setValue, ...props })
         }
+        icon={updateIcon}
+      />
+      <ActionButton
+        handleAction={handleDelete}
+        icon={deleteIcon}
       />
     </div>
   );
