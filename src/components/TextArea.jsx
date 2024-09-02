@@ -19,6 +19,7 @@ function TextArea(props) {
         className="textarea"
         rows={8}
         cols={31}
+        maxLength={600}
         onChange={handleValueChange(setValue)}
         onKeyDown={(e) =>
           handleKeyDown(e, () => handleAction({ value, setValue, ...props }))

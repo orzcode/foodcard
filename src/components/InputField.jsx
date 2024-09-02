@@ -21,6 +21,7 @@ function InputField(props) {
       <input
         type="text"
         value={value}
+        maxLength={props.propName === "name" ? 60 : 300}
         onChange={handleValueChange(setValue)}
         onKeyDown={(e) =>
           handleKeyDown(e, () => handleAction({ value, setValue, ...props }))
