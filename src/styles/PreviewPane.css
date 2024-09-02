@@ -3,31 +3,34 @@
     background-color: #fff;
     color: black;
     font-family: 'Lato', sans-serif;
-
     min-height: 80vh;
-    /* min-height: 1122px; */
-
-    width: 794px;    
-
-    word-wrap: break-word; /* Ensures long words break onto the next line */
-    overflow-wrap: break-word; /* Modern equivalent, handles long words */
-    word-break: break-word; /* Modern equivalent, handles long words */
-
-    padding: 2cm; /* Similar to a typical print margin */
-    box-shadow: 5px 5px 25px rgb(0, 0, 0); /* A subtle shadow to lift it off the page */
+    width: 794px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    padding: 2rem;
+    box-shadow: 5px 5px 25px rgb(0, 0, 0);
     border: 1px solid #ddd;
     overflow: auto;
     page-break-inside: avoid;
-    break-inside: avoid; /* Prevent breaking the content in the middle during printing */
+    break-inside: avoid;
 
-    img {
-        width: 100%;
-        max-width: 300px; 
-        max-height: 300px; /* Maintain aspect ratio */
-        border-radius: 1rem;
-        object-fit: cover;
-        aspect-ratio: 1;
-    }
+
+}
+
+.PreviewPane img {
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 1rem;
+    object-fit: cover;
+    aspect-ratio: 1;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.PreviewPane h2 {
+    font-size: clamp(2.4rem, 4vw, 2.6rem);
 }
 
 .PreviewPane h2, .PreviewPane h3 {
@@ -35,7 +38,6 @@
 }
 
 .PreviewPane ul, .PreviewPane ol {
-    padding-left: 2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -44,49 +46,48 @@
     font-size: 1.2rem;
 }
 
+.PreviewPane .ingredients ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for ingredients */
+    gap: 0.2rem;
+    padding-left: 1rem; /* Remove left padding for grid layout */
+    list-style-position: inside;
+}
+
+
+.PreviewPane .instructions ol {
+    columns: 2; /* Creates two columns for the instructions */
+    column-gap: 1rem; /* Adds some space between the two columns */
+    gap: 0.2rem;
+    padding-left: 1rem; /* Remove left padding for grid layout */
+    list-style-position: inside;
+}
+
+.PreviewPane .instructions li {
+    break-inside: avoid-column; /* Prevents instructions from breaking awkwardly between columns */
+}
+
 .PreviewPane .notes {
     margin-top: 2rem;
     font-style: italic;
     font-size: 1.2rem;
+    max-width: 80%;
 }
-
-.previewUpper {
-    display: flex;
-    justify-content: space-between;    
-    margin-bottom: 1rem;
-    gap: 1rem;
-}
-
-.H2Ingr{
-    display: flex;
-    flex-direction: column;
-    max-width: 50%;
-    justify-content: space-between;
-}
-
-/*-- problem - image gets wonky if parent has max width
-but max width needed to enforce text wrapping!?*/
-/*--------------------------------------------*/
 
 @media screen and (max-width: 1200px) {
-    .previewUpper {
-       /* flex-wrap: wrap; */
-       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .H2Ingr {
-        min-width: 100%;
-    }
     .PreviewPane {
         padding: 1rem;
         width: 100%;
-        overflow: visible;        
+        overflow: visible;
         max-height: 100%;
-        /*remove scrollbar causes overflow,
-        needed to set explicit max-height 
-        a bit mysterious IMO but whatever */
+    }
+
+    .PreviewPane .ingredients ul {
+        grid-template-columns: 1fr; /* Revert to single-column on small screens */
+    }
+
+    .PreviewPane .instructions ol {
+        columns: 1; /* Revert to single-column on small screens */
     }
 }
 
@@ -94,25 +95,16 @@ but max width needed to enforce text wrapping!?*/
     @page {
         size: A4;
     }
-
-    /* html, body {
-        height: 100vh;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: hidden;
-      } */
     
     .PreviewPane {
         box-sizing: border-box;
         min-height: 100vh;
         height: auto;
         padding: 5rem;
-
     }
+    
     .printButton {
         display: none;
         page-break-after: avoid;
     }
 }
-
-/* Last resort idea for image break - break into single column */

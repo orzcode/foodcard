@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
-import { useReactToPrint } from 'react-to-print'
-
+import { useReactToPrint } from 'react-to-print';
 import "../styles/PreviewPane.css";
 import PrintButton from "./PrintButton";
 
@@ -12,38 +11,28 @@ function PreviewPane(props) {
     content: () => previewPaneRef.current,
     documentTitle: "Recipe - " + props.recipe.name
   });
-  
-
 
   return (
     <div className="PreviewPane" ref={previewPaneRef}>
-      <div className="previewUpper">
-        <div className="H2Ingr">
-          <h2>{props.recipe.name}</h2>
-          <div className="ingredients">
-            <h3>Ingredients</h3>
-            <ul>
-              {props.recipe.ingredients.length === 0 ? (
-                <li>&nbsp;</li> // Empty bullet point
-              ) : (
-                props.recipe.ingredients.map(
-                  (ingredient, index) =>
-                    ingredient !== "" && <li key={index}>{ingredient}</li>
-                )
-              )}
-            </ul>
-          </div>
-        </div>
+      <h2>{props.recipe.name}</h2>
+      
+      <img
+        src={props.preview ? props.preview : "https://placehold.co/300?text=Add+a+pic!"}
+        alt="Preview"
+      />
 
-          <img
-            src={
-              props.preview
-                ? props.preview
-                : "https://placehold.co/280?text=Add+a+pic!"
-            }
-            alt="Preview"
-          />
-
+      <div className="ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          {props.recipe.ingredients.length === 0 ? (
+            <li>&nbsp;</li> // Empty bullet point
+          ) : (
+            props.recipe.ingredients.map(
+              (ingredient, index) =>
+                ingredient !== "" && <li key={index}>{ingredient}</li>
+            )
+          )}
+        </ul>
       </div>
 
       <div className="instructions">
@@ -67,8 +56,7 @@ function PreviewPane(props) {
         </div>
       ) : null}
 
-      <PrintButton handlePrint={handlePrint}/>
-
+      <PrintButton handlePrint={handlePrint} />
     </div>
   );
 }
