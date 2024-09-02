@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import ActionButton from "./ActionButton";
-import {
-  handleKeyDown,
-  handleValueChange,
-  handleAction,
-} from "./inputUtils";
-import updateIcon from '../assets/update.png';
-import deleteIcon from '../assets/delete.png';
+import { handleKeyDown, handleValueChange, handleAction } from "./inputUtils";
+import updateIcon from "../assets/update.png";
+import deleteIcon from "../assets/delete.png";
 
 function InputField(props) {
   const [value, setValue] = useState(props.initialValue || "");
 
   const handleDelete = () => {
     props.setRecipe((prevRecipe) => {
-      const updatedArray = prevRecipe[props.propName].filter((_, i) => i !== props.index);
+      const updatedArray = prevRecipe[props.propName].filter(
+        (_, i) => i !== props.index
+      );
       return { ...prevRecipe, [props.propName]: updatedArray };
     });
   };
@@ -31,14 +29,18 @@ function InputField(props) {
       />
       <ActionButton
         handleAction={() =>
-          handleAction({ actionType: props.actionType, value, setValue, ...props })
+          handleAction({
+            actionType: props.actionType,
+            value,
+            setValue,
+            ...props,
+          })
         }
         icon={updateIcon}
       />
-      <ActionButton
-        handleAction={handleDelete}
-        icon={deleteIcon}
-      />
+      {props.propName !== "name" && (
+        <ActionButton handleAction={handleDelete} icon={deleteIcon} />
+      )}
     </div>
   );
 }

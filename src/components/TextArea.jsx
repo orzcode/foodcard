@@ -4,7 +4,9 @@ import {
   handleKeyDown,
   handleValueChange,
   handleAction,
-} from "./inputUtils"; 
+} from "./inputUtils";
+import updateIcon from "../assets/update.png";
+import deleteIcon from "../assets/delete.png";
 
 function TextArea(props) {
   const [value, setValue] = useState(props.initialValue || "");
@@ -22,10 +24,16 @@ function TextArea(props) {
           handleKeyDown(e, () => handleAction({ value, setValue, ...props }))
         }
       />
-      <ActionButton
+<ActionButton
         handleAction={() =>
-          handleAction({ actionType: props.actionType, value, setValue, ...props })
+          handleAction({
+            actionType: props.actionType,
+            value,
+            setValue,
+            ...props,
+          })
         }
+        icon={updateIcon}
       />
     </div>
   );
