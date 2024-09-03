@@ -74,7 +74,7 @@
     max-width: 80%;
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
     .PreviewPane {
         padding: 1rem;
         width: 100%;
@@ -82,14 +82,7 @@
         max-height: 100%;
     }
 
-    /* .PreviewPane .ingredients ul {
-        grid-template-columns: 1fr; 
-    }
-
-    .PreviewPane .instructions ol {
-        columns: 1;
-    } */
-}
+} */
 
 @media print {
     @page {
