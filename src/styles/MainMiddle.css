@@ -32,10 +32,9 @@
 
    .MainMiddle{
 	flex-direction: column;
-
    }
    .PreviewPane, .InputPane {
-	/* width: 100%; */
+	width: 100%;
 	/* don't work here - these are applied on individual components*/
  }
 }
