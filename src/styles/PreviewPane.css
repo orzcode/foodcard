@@ -82,13 +82,13 @@
         max-height: 100%;
     }
 
-    .PreviewPane .ingredients ul {
-        grid-template-columns: 1fr; /* Revert to single-column on small screens */
+    /* .PreviewPane .ingredients ul {
+        grid-template-columns: 1fr; 
     }
 
     .PreviewPane .instructions ol {
-        columns: 1; /* Revert to single-column on small screens */
-    }
+        columns: 1;
+    } */
 }
 
 @media print {
