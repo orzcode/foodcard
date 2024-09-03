@@ -50,8 +50,7 @@
 .PreviewPane ul li, .PreviewPane ol li {
     line-height: 1.6;
     font-size: 1.2rem;
-    outline: 1px solid red;
-}
+    }
 
 .PreviewPane .ingredients ul {
     display: grid;
