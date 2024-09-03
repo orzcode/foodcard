@@ -80,6 +80,7 @@
         width: 100%;
         overflow: visible;
         max-height: 100%;
+        min-height: 100%;
     }
 
 }
@@ -92,8 +93,7 @@
     .PreviewPane {
         box-sizing: border-box;
         min-height: 100vh;
-        height: auto;
-        padding: 5rem;
+        height: 100vh;
     }
     
     .printButton {
