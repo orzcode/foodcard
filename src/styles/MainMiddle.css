@@ -11,6 +11,15 @@
 
 	padding: calc(1rem + 2vw);
 	gap: 2rem;
+
+
+	background-image: url('../assets/bg_food.png'), url('../assets/bg_save.png');
+	background-position: top left, bottom right;
+	background-repeat: no-repeat;
+	background-size: 60vh, 50vh; /* Adjust sizes of each image as needed */
+	height: 100%;
+	margin: 0;
+	padding: 0;
   }
 
 @media all and (max-width: 1200px) {
