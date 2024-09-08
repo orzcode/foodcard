@@ -113,7 +113,7 @@ width: 100%;
 }
 /*-----------------------------------------*/
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 794px) {
   .InputPane {
     width: 100%;
   }

@@ -22,7 +22,7 @@
 	padding: calc(1rem + 2vw);
   }
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 794px) {
 	/* Solution for wrapping: 
 	
 		Either flex-direction column (as a media Q at desired breakpoint)
