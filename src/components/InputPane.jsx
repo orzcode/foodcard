@@ -68,6 +68,7 @@ function InputPane(props) {
               setRecipe={props.setRecipe}
               recipe={props.recipe}
               propName="ingredients"
+              initialValue="" // Ensure new ingredient field starts empty
             />
           )}
         </ul>
@@ -96,6 +97,7 @@ function InputPane(props) {
               setRecipe={props.setRecipe}
               recipe={props.recipe}
               propName="instructions"
+              initialValue="" // Ensure new ingredient field starts empty
             />
           )}
         </ol>

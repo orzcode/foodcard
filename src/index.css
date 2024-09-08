@@ -37,7 +37,7 @@ html {
   caret-color: transparent;
 }
 body {
-  font-size: clamp(1.5rem, calc(1.5rem + 0.5vw), 1.8rem);  
+  font-size: clamp(1.5rem, calc(1.5rem + 0.5vw), 1.6rem);  
   /* FONTSIZE TRICK-- 1 rem = 10 px here, usually 1 rem = 16px */
   /* FONTSIZE - Adding the 0.4 is for responsivity */
 }
