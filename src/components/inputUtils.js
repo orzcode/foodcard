@@ -46,7 +46,7 @@ function handleKeyDown(event, actionHandler) {
 	  ...prevRecipe,
 	  [propName]: recipeSubArrayCopy,
 	}));
-	//setValue(""); // Clear the input field
+	setValue(""); // Clear the input field
   }
   
   // Handles deciding between applying changes or adding a new item
